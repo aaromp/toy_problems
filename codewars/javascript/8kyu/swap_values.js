@@ -5,9 +5,5 @@
 // Can you figure out what's wrong here?
 
 function swapValues(array) {
-  var temporary;
-
-  temporary = array[0];
-  array[0] = array[1];
-  array[1] = temporary;
+  array.reverse();
 }

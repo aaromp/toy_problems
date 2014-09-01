@@ -8,12 +8,7 @@
 function sum(numbers) {
   'use strict';
 
-  var result, i;
-
-  result = 0;
-  for (i = 0; i < numbers.length; i++) {
-    result += numbers[i];
-  }
-
-  return result;
+  return numbers.reduce(function(previousValue, currentValue) {
+    return previousValue + currentValue;
+  }, 0);
 }

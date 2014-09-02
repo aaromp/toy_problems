@@ -7,6 +7,6 @@
 // Number object, and false if not.
 
 function isAN(value) {
-  return (typeof value === 'number' || value instanceof Number) && 
-         !isNaN(value);
+  return typeof value === 'number' || 
+         (value instanceof Number && !isNaN(value));
 }

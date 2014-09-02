@@ -36,3 +36,7 @@ function factorialDivision(n, d) {
   return n * factorialDivision(n-1, d);
 }
 
+// function factorialDivision(n, d) {
+//   return n === d ? 1 : n * factorialDivision(n-1, d);
+// }
+

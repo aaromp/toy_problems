@@ -33,5 +33,5 @@
 # isSantaClausable notSanta # must return FALSE
 
 isSantaClausable = (object) ->
-  ['sayHoHoHo', 'distributeGifts', 'sayHoHoHo'].every (property) ->
+  ['sayHoHoHo', 'distributeGifts', 'goDownTheChimney'].every (property) ->
     typeof object[property] is 'function'

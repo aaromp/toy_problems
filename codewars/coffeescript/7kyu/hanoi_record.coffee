@@ -17,4 +17,4 @@
 # placed on top of a smaller disk.
 
 hanoi = (disks) ->
-    if disks is 0 then 0 else 2 * hanoi(disks-1) + 1
+  if disks is 0 then 0 else 2 * hanoi(disks-1) + 1

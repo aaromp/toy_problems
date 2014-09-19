@@ -11,13 +11,13 @@ let title = "Even Fibonacci numbers"
 let max = 4000000
 
 func fibonacci(n: Int, inout sequence: [Int:Int]) -> Int {
-    if sequence[n] != nil {
-        return sequence[n]!
+    if let result = sequence[n] {
+        return result
     }
     
     sequence[n] = fibonacci(n-2, &sequence) + fibonacci(n-1, &sequence)
     
-    return sequence[n]!
+    return fibonacci(n, &sequence)
 }
 
 
@@ -26,8 +26,10 @@ func sumEvenFibonacci() -> Int {
     
     var sequence: [Int: Int]  = [0: 0, 1: 1]
     for var index = 0; fibonacci(index, &sequence) < max; index++ {
-        if sequence[index]! % 2 == 0 {
-            result += sequence[index]!
+        if let value = sequence[index] {
+            if value % 2 == 0 {
+                result += value
+            }
         }
     }
     

@@ -12,11 +12,15 @@ let max = 4000000
 
 func fibonacci(n: Int, inout sequence: [Int:Int]) -> Int {
     if let result = sequence[n] {
+        if result >= max {
+            sequence.removeValueForKey(n)
+            return max
+        }
         return result
     }
     
     sequence[n] = fibonacci(n-2, &sequence) + fibonacci(n-1, &sequence)
-    
+  
     return fibonacci(n, &sequence)
 }
 
